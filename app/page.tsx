@@ -2,9 +2,5 @@ import Image from 'next/image';
 import NavBar from './NavBar';
 
 export default function Home() {
-  return (
-    <div>
-      <NavBar />
-    </div>
-  );
+  return <div>Dashboard</div>;
 }
