@@ -5,7 +5,7 @@ const ErrorMessage = ({ children }: PropsWithChildren) => {
   if (!children) return null;
   return (
     <Text color="red" as="p">
-      children
+      {children}
     </Text>
   );
 };
