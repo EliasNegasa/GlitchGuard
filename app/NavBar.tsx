@@ -2,7 +2,6 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
 import { IoBugSharp } from 'react-icons/io5';
 
 const NavBar = () => {
