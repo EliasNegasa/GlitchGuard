@@ -1,6 +1,8 @@
 import StatusBadge from '@/app/components/StatusBadge';
 import prisma from '@/prisma/client';
-import { Card, Flex, Heading, Text } from '@radix-ui/themes';
+import { Pencil2Icon } from '@radix-ui/react-icons';
+import { Button, Card, Flex, Heading, Text } from '@radix-ui/themes';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
 
@@ -16,13 +18,21 @@ const IssueDetailsPage = async ({ params }: Props) => {
   if (!issue) return notFound();
 
   return (
-    <div className="mx-10">
-      <Heading>{issue.title}</Heading>
+    <div className="mx-10 max-w-xl">
+      <Flex justify="between">
+        <Heading>{issue.title}</Heading>
+        <Link href={`/issues/${issue.id}/edit`}>
+          <Button>
+            <Pencil2Icon />
+            Edit
+          </Button>
+        </Link>
+      </Flex>
       <Flex gap="3" my="2">
         <StatusBadge status={issue.status} />
         <Text>{issue.createdAt.toDateString()}</Text>
       </Flex>
-      <Card className='prose' mt='4'>
+      <Card className="prose" mt="4">
         <Markdown>{issue.description}</Markdown>
       </Card>
     </div>
