@@ -29,7 +29,7 @@ const IssueDetailsPage = async ({ params }: Props) => {
               Edit
             </Button>
           </Link>
-          <DeleteIssueButton />
+          <DeleteIssueButton issueId={issue.id} />
         </Flex>
       </Flex>
       <Flex gap="3" my="2">

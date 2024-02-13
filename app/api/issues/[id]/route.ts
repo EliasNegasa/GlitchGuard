@@ -58,5 +58,6 @@ export async function DELETE(
       id: parseInt(params.id),
     },
   });
+
   return NextResponse.json({});
 }
