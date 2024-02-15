@@ -1,4 +1,5 @@
+import { Container } from '@radix-ui/themes';
 
 export default function Home() {
-  return <div>Dashboard</div>;
+  return <Container>Dashboard</Container>;
 }
