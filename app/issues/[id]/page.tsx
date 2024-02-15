@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
 import DeleteIssueButton from './DeleteIssueButton';
+import AssigneeSelect from './AssigneeSelect';
 
 interface Props {
   params: { id: string };
@@ -28,6 +29,7 @@ const IssueDetailsPage = async ({ params }: Props) => {
         <Heading>{issue.title}</Heading>
         {session && (
           <Flex className="space-x-2">
+            <AssigneeSelect />
             <Link href={`/issues/${issue.id}/edit`}>
               <Button>
                 <Pencil2Icon />
