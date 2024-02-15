@@ -63,7 +63,7 @@ const NavLinks = () => {
 };
 
 const AuthStatus = () => {
-  const { status, data } = useSession();
+  const { status, data: session } = useSession();
 
   if (status === 'loading') return <Skeleton width="4rem" />;
 
@@ -79,7 +79,7 @@ const AuthStatus = () => {
       <DropdownMenu.Root>
         <DropdownMenu.Trigger>
           <Avatar
-            src={data!.user!.image!}
+            src={session!.user!.image!}
             fallback="?"
             size="2"
             radius="full"
@@ -89,7 +89,7 @@ const AuthStatus = () => {
         </DropdownMenu.Trigger>
         <DropdownMenu.Content>
           <DropdownMenu.Label>
-            <Text>{data!.user!.email}</Text>
+            <Text>{session!.user!.email}</Text>
           </DropdownMenu.Label>
           <DropdownMenu.Item>
             <Link href="/api/auth/signout">Logout</Link>
