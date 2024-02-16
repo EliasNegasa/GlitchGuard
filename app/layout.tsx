@@ -3,6 +3,7 @@ import '@radix-ui/themes/styles.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import NavBar from './NavBar';
+import QueryClientProvider from './QueryClientProvider';
 import AuthProvider from './auth/Provider';
 import './globals.css';
 
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          <Theme appearance="light" accentColor="brown">
-            <NavBar />
-            <Container>{children}</Container>
-          </Theme>
-        </AuthProvider>
+        <QueryClientProvider>
+          <AuthProvider>
+            <Theme appearance="light" accentColor="brown">
+              <NavBar />
+              <Container>{children}</Container>
+            </Theme>
+          </AuthProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );
