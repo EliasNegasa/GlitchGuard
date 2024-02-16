@@ -9,8 +9,8 @@ import 'easymde/dist/easymde.min.css';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { z } from 'zod';
 import SimpleMDE from 'react-simplemde-editor';
+import { z } from 'zod';
 
 type IssueFormData = z.infer<typeof issueSchema>;
 
