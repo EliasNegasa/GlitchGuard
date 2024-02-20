@@ -7,8 +7,8 @@ import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
-import DeleteIssueButton from './DeleteIssueButton';
 import AssigneeSelect from './AssigneeSelect';
+import DeleteIssueButton from './DeleteIssueButton';
 
 interface Props {
   params: { id: string };
