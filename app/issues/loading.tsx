@@ -1,5 +1,6 @@
-import { IssueActions, Skeleton } from '@/app/components';
+import { Skeleton } from '@/app/components';
 import { Table, Text } from '@radix-ui/themes';
+import IssueActions from './IssueActions';
 
 const IssueLoadingSkeleton = () => {
   const issues = [1, 2, 3, 4, 5];
