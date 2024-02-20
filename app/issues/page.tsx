@@ -3,9 +3,20 @@ import prisma from '@/prisma/client';
 import { Container, Table, Text } from '@radix-ui/themes';
 import Link from 'next/link';
 import IssueActions from './IssueActions';
+import { Status } from '@prisma/client';
 
-const IssuePage = async () => {
-  const issues = await prisma.issue.findMany();
+interface Props {
+  searchParams: {
+    status: Status;
+  };
+}
+
+const IssuePage = async ({ searchParams }: Props) => {
+  const issues = await prisma.issue.findMany({
+    where: {
+      status: searchParams.status,
+    },
+  });
 
   return (
     <Container>
