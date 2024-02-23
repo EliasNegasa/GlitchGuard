@@ -24,10 +24,15 @@ const columns: { label: string; value: keyof Issue; className?: string }[] = [
 ];
 
 const IssuePage = async ({ searchParams }: Props) => {
+  const orderBy = columns.map((c) => c.value).includes(searchParams.orderBy)
+    ? { [searchParams.orderBy]: 'asc' }
+    : undefined;
+
   const issues = await prisma.issue.findMany({
     where: {
       status: searchParams.status,
     },
+    orderBy,
   });
 
   return (
