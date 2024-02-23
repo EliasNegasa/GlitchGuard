@@ -5,6 +5,7 @@ import { Container, Table, Text } from '@radix-ui/themes';
 import Link from 'next/link';
 import IssueActions from './IssueActions';
 import { ArrowUpIcon } from '@radix-ui/react-icons';
+import Pagination from '../components/Pagination';
 
 interface Props {
   searchParams: {
@@ -85,6 +86,7 @@ const IssuePage = async ({ searchParams }: Props) => {
           ))}
         </Table.Body>
       </Table.Root>
+      <Pagination currentPage={5} itemCount={50} pageSize={10} />
     </Container>
   );
 };
