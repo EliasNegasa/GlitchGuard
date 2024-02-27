@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
 import AssigneeSelect from './AssigneeSelect';
 import DeleteIssueButton from './DeleteIssueButton';
+import { Metadata } from 'next';
 
 interface Props {
   params: { id: string };
@@ -52,5 +53,16 @@ const IssueDetailsPage = async ({ params }: Props) => {
 };
 
 export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({ params }: Props) {
+  const issue = await prisma.issue.findUnique({
+    where: { id: parseInt(params.id) },
+  });
+
+  return {
+    title: issue?.title,
+    description: 'Details of issue ' + issue?.id,
+  };
+}
 
 export default IssueDetailsPage;
