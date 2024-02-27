@@ -9,18 +9,20 @@ import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
 import AssigneeSelect from './AssigneeSelect';
 import DeleteIssueButton from './DeleteIssueButton';
-import { Metadata } from 'next';
+import { cache } from 'react';
 
 interface Props {
   params: { id: string };
 }
 
+const fetchIssue = cache((issueId: number) =>
+  prisma.issue.findUnique({ where: { id: issueId } })
+);
+
 const IssueDetailsPage = async ({ params }: Props) => {
   const session = await getServerSession(authOptions);
 
-  const issue = await prisma.issue.findUnique({
-    where: { id: parseInt(params.id) },
-  });
+  const issue = await fetchIssue(parseInt(params.id));
 
   if (!issue) return notFound();
 
@@ -55,9 +57,7 @@ const IssueDetailsPage = async ({ params }: Props) => {
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: Props) {
-  const issue = await prisma.issue.findUnique({
-    where: { id: parseInt(params.id) },
-  });
+  const issue = await fetchIssue(parseInt(params.id));
 
   return {
     title: issue?.title,
