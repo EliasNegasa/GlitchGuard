@@ -1,7 +1,5 @@
 # Glitch Guard - Issue Tracking Web App
 
-![Glitch Guard Logo](link_to_logo)
-
 Glitch Guard is a modern issue tracking web application built with Next.js 13, TypeScript, Tailwind CSS, Prisma, NextAuth, Radix UI, and Zod. It aims to streamline issue management for projects of any scale, providing essential features such as issue creation, assignment, filtering, updating, and deletion. Additionally, Glitch Guard offers a comprehensive dashboard to visualize active issues, assigned tasks, and personalized issues.
 
 ## Features
