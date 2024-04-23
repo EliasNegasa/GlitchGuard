@@ -40,7 +40,19 @@ Glitch Guard is a modern issue tracking web application built with Next.js 13, T
     npm install
     ```
 
-3. Set up environment variables (if any).
+3. Set up environment variables.
+
+Create a `.env` file in the project root and add the following environment variables:
+
+    ```env
+    DATABASE_URL=""
+    NEXTAUTH_URL="http://localhost:3000"
+    NEXTAUTH_SECRET=""
+    GOOGLE_CLIENT_ID=""
+    GOOGLE_CLIENT_SECRET=""
+    ```
+
+    Ensure to replace the empty strings with your actual values.
 
 4. Start the development server:
 
