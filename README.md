@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Glitch Guard - Issue Tracking Web App
 
-## Getting Started
+![Glitch Guard Logo](link_to_logo)
 
-First, run the development server:
+Glitch Guard is a modern issue tracking web application built with Next.js 13, TypeScript, Tailwind CSS, Prisma, NextAuth, Radix UI, and Zod. It aims to streamline issue management for projects of any scale, providing essential features such as issue creation, assignment, filtering, updating, and deletion. Additionally, Glitch Guard offers a comprehensive dashboard to visualize active issues, assigned tasks, and personalized issues.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Next.js 13
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js is a React framework that enables server-side rendering, static site generation, and routing.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![Next.js Logo](nextjs_logo.png)
 
-## Learn More
+### TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+TypeScript is a strongly typed superset of JavaScript that enhances code quality and developer productivity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![TypeScript Logo](typescript_logo.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tailwind CSS
 
-## Deploy on Vercel
+Tailwind CSS is a utility-first CSS framework for building custom designs quickly.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Tailwind CSS Logo](tailwindcss_logo.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Prisma
+
+Prisma is a modern database toolkit that simplifies database access and manipulation with type-safe queries.
+
+![Prisma Logo](prisma_logo.png)
+
+### NextAuth
+
+NextAuth is an authentication library for Next.js applications that supports various authentication providers and strategies.
+
+![NextAuth Logo](nextauth_logo.png)
+
+### Radix UI
+
+Radix UI is a collection of composable React components for building accessible and customizable user interfaces.
+
+![Radix UI Logo](radix_ui_logo.png)
+
+### Zod
+
+Zod is a TypeScript-first schema declaration and validation library for runtime and compile-time safety.
+
+![Zod Logo](zod_logo.png)
