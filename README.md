@@ -52,7 +52,7 @@ Glitch Guard is a modern issue tracking web application built with Next.js 13, T
         GOOGLE_CLIENT_SECRET=""
         ```
     
-        Ensure to replace the empty strings with your actual values.
+   Ensure to replace the empty strings with your actual values.
 
 4. Start the development server:
 
