@@ -4,46 +4,49 @@
 
 Glitch Guard is a modern issue tracking web application built with Next.js 13, TypeScript, Tailwind CSS, Prisma, NextAuth, Radix UI, and Zod. It aims to streamline issue management for projects of any scale, providing essential features such as issue creation, assignment, filtering, updating, and deletion. Additionally, Glitch Guard offers a comprehensive dashboard to visualize active issues, assigned tasks, and personalized issues.
 
+## Features
+
+- **Add Issues:** Easily add new issues to your project.
+- **Assign Issue:** Assign issues to team members for resolution.
+- **Filter Issues:** Filter issues based on various criteria for better organization.
+- **Update and Delete Issue:** Edit or remove issues as needed.
+- **Dashboard:** Get an overview of active issues, assigned tasks, and personalized issues at a glance.
+- **Authentication:** Secure authentication system to manage user access.
+- **Sorting and Pagination:** Efficiently sort and paginate through issues for better management.
+- **Responsiveness:** Enjoy a seamless experience across devices with responsive design.
+
 ## Tech Stack
 
-### Next.js 13
+![Next.js 13](https://img.shields.io/badge/Next.js%2013-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+![NextAuth](https://img.shields.io/badge/NextAuth-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Radix UI](https://img.shields.io/badge/Radix%20UI-646CFF?style=for-the-badge&logo=radix-ui&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-FF3E00?style=for-the-badge&logo=zod&logoColor=white)
 
-Next.js is a React framework that enables server-side rendering, static site generation, and routing.
+## Getting Started
 
-![Next.js Logo](nextjs_logo.png)
+1. Clone the repository:
 
-### TypeScript
+    ```bash
+    git clone https://github.com/your_username/GlitchGuard.git
+    ```
 
-TypeScript is a strongly typed superset of JavaScript that enhances code quality and developer productivity.
+2. Install dependencies:
 
-![TypeScript Logo](typescript_logo.png)
+    ```bash
+    cd GlitchGuard
+    npm install
+    ```
 
-### Tailwind CSS
+3. Set up environment variables (if any).
 
-Tailwind CSS is a utility-first CSS framework for building custom designs quickly.
+4. Start the development server:
 
-![Tailwind CSS Logo](tailwindcss_logo.png)
+    ```bash
+    npm run dev
+    ```
 
-### Prisma
+5. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view Glitch Guard.
 
-Prisma is a modern database toolkit that simplifies database access and manipulation with type-safe queries.
-
-![Prisma Logo](prisma_logo.png)
-
-### NextAuth
-
-NextAuth is an authentication library for Next.js applications that supports various authentication providers and strategies.
-
-![NextAuth Logo](nextauth_logo.png)
-
-### Radix UI
-
-Radix UI is a collection of composable React components for building accessible and customizable user interfaces.
-
-![Radix UI Logo](radix_ui_logo.png)
-
-### Zod
-
-Zod is a TypeScript-first schema declaration and validation library for runtime and compile-time safety.
-
-![Zod Logo](zod_logo.png)
